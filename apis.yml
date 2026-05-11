@@ -33,6 +33,15 @@ common:
     url: https://www.paloaltonetworks.com/network-security/panorama
   - type: Documentation
     url: https://docs.paloaltonetworks.com/panorama
+  - type: Integrations
+    url: https://www.paloaltonetworks.com/partners
+integrations:
+  - name: CSP
+  - name: GSI
+  - name: MSSP
+  - name: SP
+  - name: Solution Providers
+  - name: Partner Login
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
