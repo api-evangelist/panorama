@@ -1,0 +1,915 @@
+{
+  "item": [
+    {
+      "id": "fe031419-99ff-4a53-a43b-d033fdcb567b",
+      "name": "PAN-OS XML API request",
+      "request": {
+        "name": "PAN-OS XML API request",
+        "description": {
+          "content": "Single XML API entry point. The operation is selected through the\n`type` query parameter (e.g. `keygen`, `op`, `config`, `commit`,\n`report`, `export`, `import`, `log`, `user-id`).\n",
+          "type": "text/plain"
+        },
+        "url": {
+          "path": [
+            "api",
+            ""
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "type",
+              "value": "<string>",
+              "description": "(Required) "
+            },
+            {
+              "disabled": false,
+              "key": "action",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "cmd",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "xpath",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "key",
+              "value": "<string>"
+            }
+          ],
+          "variable": [
+            {
+              "description": "Hostname or IP of the Panorama appliance",
+              "type": "any",
+              "value": "{{panorama_host}}",
+              "key": "panorama_host"
+            }
+          ]
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/xml"
+          }
+        ],
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "a0a9befc-0cff-4509-b06f-d0f756b96f89",
+          "name": "XML response document.",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "api",
+                ""
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "type",
+                  "value": "<string>"
+                },
+                {
+                  "key": "action",
+                  "value": "<string>"
+                },
+                {
+                  "key": "cmd",
+                  "value": "<string>"
+                },
+                {
+                  "key": "xpath",
+                  "value": "<string>"
+                },
+                {
+                  "key": "key",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "description": "Hostname or IP of the Panorama appliance",
+                  "type": "any",
+                  "value": "{{panorama_host}}",
+                  "key": "panorama_host"
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "X-PAN-KEY",
+                "value": "<API Key>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/xml"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/xml"
+            }
+          ],
+          "body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<element>(string)</element>",
+          "cookie": [],
+          "_postman_previewlanguage": "xml"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "7e6c95d9-b3b6-42d1-a5b7-84990074ef94",
+      "name": "PAN-OS XML API request (POST form)",
+      "request": {
+        "name": "PAN-OS XML API request (POST form)",
+        "description": {
+          "content": "Same as GET, but parameters may be provided as form fields.",
+          "type": "text/plain"
+        },
+        "url": {
+          "path": [
+            "api",
+            ""
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "description": "Hostname or IP of the Panorama appliance",
+              "type": "any",
+              "value": "{{panorama_host}}",
+              "key": "panorama_host"
+            }
+          ]
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          },
+          {
+            "key": "Accept",
+            "value": "application/xml"
+          }
+        ],
+        "method": "POST",
+        "auth": null,
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "disabled": false,
+              "key": "type",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "action",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "cmd",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "xpath",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "key",
+              "value": "<string>"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "id": "a984efaf-700d-426f-a74e-b7ad538a976d",
+          "name": "XML response document.",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "api",
+                ""
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "Hostname or IP of the Panorama appliance",
+                  "type": "any",
+                  "value": "{{panorama_host}}",
+                  "key": "panorama_host"
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "X-PAN-KEY",
+                "value": "<API Key>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/xml"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "type",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "action",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "cmd",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "xpath",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "key",
+                  "value": "<string>"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/xml"
+            }
+          ],
+          "body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<element>(string)</element>",
+          "cookie": [],
+          "_postman_previewlanguage": "xml"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "51efe542-bee6-45d6-8187-e874ef9a48d0",
+      "name": "List address objects",
+      "request": {
+        "name": "List address objects",
+        "description": {},
+        "url": {
+          "path": [
+            "restapi",
+            "v11.1",
+            "Objects",
+            "Addresses"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "location",
+              "value": "<string>",
+              "description": "(Required) "
+            },
+            {
+              "disabled": false,
+              "key": "device-group",
+              "value": "<string>"
+            }
+          ],
+          "variable": [
+            {
+              "description": "Hostname or IP of the Panorama appliance",
+              "type": "any",
+              "value": "{{panorama_host}}",
+              "key": "panorama_host"
+            }
+          ]
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "db7c1cdc-050f-4b72-a89f-fda342a0a122",
+          "name": "A list of address objects.",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "restapi",
+                "v11.1",
+                "Objects",
+                "Addresses"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "location",
+                  "value": "<string>"
+                },
+                {
+                  "key": "device-group",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "description": "Hostname or IP of the Panorama appliance",
+                  "type": "any",
+                  "value": "{{panorama_host}}",
+                  "key": "panorama_host"
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "X-PAN-KEY",
+                "value": "<API Key>"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "6665a082-2d81-4fc7-bd1f-0edf82f8339c",
+      "name": "Create an address object",
+      "request": {
+        "name": "Create an address object",
+        "description": {},
+        "url": {
+          "path": [
+            "restapi",
+            "v11.1",
+            "Objects",
+            "Addresses"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "location",
+              "value": "<string>",
+              "description": "(Required) "
+            },
+            {
+              "disabled": false,
+              "key": "name",
+              "value": "<string>",
+              "description": "(Required) "
+            }
+          ],
+          "variable": [
+            {
+              "description": "Hostname or IP of the Panorama appliance",
+              "type": "any",
+              "value": "{{panorama_host}}",
+              "key": "panorama_host"
+            }
+          ]
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "method": "POST",
+        "auth": null,
+        "body": {
+          "mode": "raw",
+          "raw": "<object>",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": [
+        {
+          "id": "3d50aed0-a893-465c-96b0-d077b9fcd405",
+          "name": "Address object created.",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "restapi",
+                "v11.1",
+                "Objects",
+                "Addresses"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "location",
+                  "value": "<string>"
+                },
+                {
+                  "key": "name",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "description": "Hostname or IP of the Panorama appliance",
+                  "type": "any",
+                  "value": "{{panorama_host}}",
+                  "key": "panorama_host"
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "X-PAN-KEY",
+                "value": "<API Key>"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "<object>",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "2ff90fbd-41c3-42a7-aaaa-61a87f94fd47",
+      "name": "List security rules",
+      "request": {
+        "name": "List security rules",
+        "description": {},
+        "url": {
+          "path": [
+            "restapi",
+            "v11.1",
+            "Policies",
+            "SecurityRules"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "location",
+              "value": "<string>",
+              "description": "(Required) "
+            },
+            {
+              "disabled": false,
+              "key": "device-group",
+              "value": "<string>"
+            }
+          ],
+          "variable": [
+            {
+              "description": "Hostname or IP of the Panorama appliance",
+              "type": "any",
+              "value": "{{panorama_host}}",
+              "key": "panorama_host"
+            }
+          ]
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "7e5fa77a-6ff7-42fa-860f-c828e01beee5",
+          "name": "A list of security rules.",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "restapi",
+                "v11.1",
+                "Policies",
+                "SecurityRules"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "location",
+                  "value": "<string>"
+                },
+                {
+                  "key": "device-group",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "description": "Hostname or IP of the Panorama appliance",
+                  "type": "any",
+                  "value": "{{panorama_host}}",
+                  "key": "panorama_host"
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "X-PAN-KEY",
+                "value": "<API Key>"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "b1df9e90-648e-4ebb-8762-7d7991ff6676",
+      "name": "Create a security rule",
+      "request": {
+        "name": "Create a security rule",
+        "description": {},
+        "url": {
+          "path": [
+            "restapi",
+            "v11.1",
+            "Policies",
+            "SecurityRules"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "location",
+              "value": "<string>",
+              "description": "(Required) "
+            },
+            {
+              "disabled": false,
+              "key": "name",
+              "value": "<string>",
+              "description": "(Required) "
+            }
+          ],
+          "variable": [
+            {
+              "description": "Hostname or IP of the Panorama appliance",
+              "type": "any",
+              "value": "{{panorama_host}}",
+              "key": "panorama_host"
+            }
+          ]
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "method": "POST",
+        "auth": null,
+        "body": {
+          "mode": "raw",
+          "raw": "<object>",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": [
+        {
+          "id": "2c20322f-c8fc-462f-be65-1e010f422fb5",
+          "name": "Security rule created.",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "restapi",
+                "v11.1",
+                "Policies",
+                "SecurityRules"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "location",
+                  "value": "<string>"
+                },
+                {
+                  "key": "name",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "description": "Hostname or IP of the Panorama appliance",
+                  "type": "any",
+                  "value": "{{panorama_host}}",
+                  "key": "panorama_host"
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "X-PAN-KEY",
+                "value": "<API Key>"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "<object>",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "e96ab1eb-b0ae-4208-a922-8d4026fa8ea0",
+      "name": "List network interfaces",
+      "request": {
+        "name": "List network interfaces",
+        "description": {},
+        "url": {
+          "path": [
+            "restapi",
+            "v11.1",
+            "Network",
+            "Interfaces"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "location",
+              "value": "<string>",
+              "description": "(Required) "
+            }
+          ],
+          "variable": [
+            {
+              "description": "Hostname or IP of the Panorama appliance",
+              "type": "any",
+              "value": "{{panorama_host}}",
+              "key": "panorama_host"
+            }
+          ]
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "8ea2466d-f7dd-42ea-aa84-bdc3cecffd91",
+          "name": "A list of network interfaces.",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "restapi",
+                "v11.1",
+                "Network",
+                "Interfaces"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "location",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "description": "Hostname or IP of the Panorama appliance",
+                  "type": "any",
+                  "value": "{{panorama_host}}",
+                  "key": "panorama_host"
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "X-PAN-KEY",
+                "value": "<API Key>"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "Hostname or IP of the Panorama appliance",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "panorama.example.com",
+      "key": "panorama_host"
+    },
+    {
+      "type": "string",
+      "value": "https://{{panorama_host}}",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "X-PAN-KEY"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "d0e5694b-92af-4643-9d53-350bfcff5d2e",
+    "name": "Panorama API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Panorama and PAN-OS XML and REST APIs for centralized network security\nmanagement across Palo Alto Networks firewalls. The XML API uses\nquery-parameter style request types (`type=keygen`, `type=op`,\n`type=config`, etc.), while the REST API uses versioned resource paths\nunder `/restapi/v{version}/`.\n\n\nContact Support:\n Name: Palo Alto Networks",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,210 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Panorama API",
+    "version": "11.1"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "X-PAN-KEY",
+      "value": "{{X-PAN-KEY}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "PAN-OS XML API request",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://{panorama_host}/api/",
+        "params": [
+          {
+            "name": "type",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "action",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "cmd",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "xpath",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "key",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "Single XML API entry point. The operation is selected through the\n`type` query parameter (e.g. `keygen`, `op`, `config`, `commit`,\n`report`, `export`, `import`, `log`, `user-id`).\n"
+    },
+    {
+      "info": {
+        "name": "PAN-OS XML API request (POST form)",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://{panorama_host}/api/",
+        "body": {
+          "type": "form-urlencoded",
+          "data": [
+            {
+              "name": "type",
+              "value": ""
+            },
+            {
+              "name": "action",
+              "value": ""
+            },
+            {
+              "name": "cmd",
+              "value": ""
+            },
+            {
+              "name": "xpath",
+              "value": ""
+            },
+            {
+              "name": "key",
+              "value": ""
+            }
+          ]
+        }
+      },
+      "docs": "Same as GET, but parameters may be provided as form fields."
+    },
+    {
+      "info": {
+        "name": "List address objects",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://{panorama_host}/restapi/v11.1/Objects/Addresses",
+        "params": [
+          {
+            "name": "location",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "device-group",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "List address objects"
+    },
+    {
+      "info": {
+        "name": "Create an address object",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://{panorama_host}/restapi/v11.1/Objects/Addresses",
+        "params": [
+          {
+            "name": "location",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "name",
+            "value": "",
+            "type": "query"
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Create an address object"
+    },
+    {
+      "info": {
+        "name": "List security rules",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://{panorama_host}/restapi/v11.1/Policies/SecurityRules",
+        "params": [
+          {
+            "name": "location",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "device-group",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "List security rules"
+    },
+    {
+      "info": {
+        "name": "Create a security rule",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://{panorama_host}/restapi/v11.1/Policies/SecurityRules",
+        "params": [
+          {
+            "name": "location",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "name",
+            "value": "",
+            "type": "query"
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Create a security rule"
+    },
+    {
+      "info": {
+        "name": "List network interfaces",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://{panorama_host}/restapi/v11.1/Network/Interfaces",
+        "params": [
+          {
+            "name": "location",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "List network interfaces"
+    }
+  ],
+  "bundled": true
+}
