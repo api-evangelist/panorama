@@ -29,6 +29,10 @@ apis:
       - type: Documentation
         url: https://docs.paloaltonetworks.com/panorama
 common:
+  - type: DomainSecurity
+    url: security/panorama-domain-security.yml
+  - type: Authentication
+    url: authentication/panorama-authentication.yml
   - type: GitHubOrganization
     url: https://github.com/panorama-ed
   - type: LinkedIn
