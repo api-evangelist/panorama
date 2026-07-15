@@ -29,6 +29,8 @@ apis:
       - type: Documentation
         url: https://docs.paloaltonetworks.com/panorama
 common:
+  - type: AgenticAccess
+    url: agentic-access/panorama-agentic-access.yml
   - type: DomainSecurity
     url: security/panorama-domain-security.yml
   - type: Authentication
