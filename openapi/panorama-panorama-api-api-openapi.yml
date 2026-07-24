@@ -1,0 +1,127 @@
+openapi: 3.1.0
+info:
+  title: Panorama Panorama API API
+  description: 'Panorama and PAN-OS XML and REST APIs for centralized network security
+
+    management across Palo Alto Networks firewalls. The XML API uses
+
+    query-parameter style request types (`type=keygen`, `type=op`,
+
+    `type=config`, etc.), while the REST API uses versioned resource paths
+
+    under `/restapi/v{version}/`.
+
+    '
+  version: '11.1'
+  contact:
+    name: Palo Alto Networks
+    url: https://docs.paloaltonetworks.com/panorama
+servers:
+- url: https://{panorama_host}
+  description: Panorama management server
+  variables:
+    panorama_host:
+      default: panorama.example.com
+      description: Hostname or IP of the Panorama appliance
+security:
+- ApiKeyHeader: []
+- ApiKeyQuery: []
+tags:
+- name: Panorama API
+paths:
+  /api/:
+    get:
+      summary: PAN-OS XML API request
+      description: 'Single XML API entry point. The operation is selected through the
+
+        `type` query parameter (e.g. `keygen`, `op`, `config`, `commit`,
+
+        `report`, `export`, `import`, `log`, `user-id`).
+
+        '
+      parameters:
+      - in: query
+        name: type
+        required: true
+        schema:
+          type: string
+          enum:
+          - keygen
+          - op
+          - config
+          - commit
+          - report
+          - export
+          - import
+          - log
+          - user-id
+      - in: query
+        name: action
+        schema:
+          type: string
+          description: Sub-action for config/op (e.g. get, set, edit, delete, show).
+      - in: query
+        name: cmd
+        schema:
+          type: string
+          description: XML command body for op/commit/report requests.
+      - in: query
+        name: xpath
+        schema:
+          type: string
+          description: XPath used by config requests.
+      - in: query
+        name: key
+        schema:
+          type: string
+          description: API key (alternative to X-PAN-KEY header).
+      responses:
+        '200':
+          description: XML response document.
+          content:
+            application/xml:
+              schema:
+                type: string
+      tags:
+      - Panorama API
+    post:
+      summary: PAN-OS XML API request (POST form)
+      description: Same as GET, but parameters may be provided as form fields.
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                type:
+                  type: string
+                action:
+                  type: string
+                cmd:
+                  type: string
+                xpath:
+                  type: string
+                key:
+                  type: string
+      responses:
+        '200':
+          description: XML response document.
+          content:
+            application/xml:
+              schema:
+                type: string
+      tags:
+      - Panorama API
+components:
+  securitySchemes:
+    ApiKeyHeader:
+      type: apiKey
+      in: header
+      name: X-PAN-KEY
+      description: API key generated via `/api/?type=keygen`.
+    ApiKeyQuery:
+      type: apiKey
+      in: query
+      name: key
+      description: API key passed as a query parameter (XML API).

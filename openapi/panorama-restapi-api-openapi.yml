@@ -1,0 +1,146 @@
+openapi: 3.1.0
+info:
+  title: Panorama Panorama API Restapi API
+  description: 'Panorama and PAN-OS XML and REST APIs for centralized network security
+
+    management across Palo Alto Networks firewalls. The XML API uses
+
+    query-parameter style request types (`type=keygen`, `type=op`,
+
+    `type=config`, etc.), while the REST API uses versioned resource paths
+
+    under `/restapi/v{version}/`.
+
+    '
+  version: '11.1'
+  contact:
+    name: Palo Alto Networks
+    url: https://docs.paloaltonetworks.com/panorama
+servers:
+- url: https://{panorama_host}
+  description: Panorama management server
+  variables:
+    panorama_host:
+      default: panorama.example.com
+      description: Hostname or IP of the Panorama appliance
+security:
+- ApiKeyHeader: []
+- ApiKeyQuery: []
+tags:
+- name: Restapi
+paths:
+  /restapi/v11.1/Objects/Addresses:
+    get:
+      summary: List address objects
+      parameters:
+      - in: query
+        name: location
+        required: true
+        schema:
+          type: string
+          enum:
+          - shared
+          - vsys
+          - panorama-pushed
+          - device-group
+      - in: query
+        name: device-group
+        schema:
+          type: string
+      responses:
+        '200':
+          description: A list of address objects.
+      tags:
+      - Restapi
+    post:
+      summary: Create an address object
+      parameters:
+      - in: query
+        name: location
+        required: true
+        schema:
+          type: string
+      - in: query
+        name: name
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Address object created.
+      tags:
+      - Restapi
+  /restapi/v11.1/Policies/SecurityRules:
+    get:
+      summary: List security rules
+      parameters:
+      - in: query
+        name: location
+        required: true
+        schema:
+          type: string
+      - in: query
+        name: device-group
+        schema:
+          type: string
+      responses:
+        '200':
+          description: A list of security rules.
+      tags:
+      - Restapi
+    post:
+      summary: Create a security rule
+      parameters:
+      - in: query
+        name: location
+        required: true
+        schema:
+          type: string
+      - in: query
+        name: name
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Security rule created.
+      tags:
+      - Restapi
+  /restapi/v11.1/Network/Interfaces:
+    get:
+      summary: List network interfaces
+      parameters:
+      - in: query
+        name: location
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: A list of network interfaces.
+      tags:
+      - Restapi
+components:
+  securitySchemes:
+    ApiKeyHeader:
+      type: apiKey
+      in: header
+      name: X-PAN-KEY
+      description: API key generated via `/api/?type=keygen`.
+    ApiKeyQuery:
+      type: apiKey
+      in: query
+      name: key
+      description: API key passed as a query parameter (XML API).
