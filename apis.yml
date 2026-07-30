@@ -5,7 +5,20 @@ description: >-
   Networks that provides centralized policy management, device configuration,
   and logging across Palo Alto Networks firewalls and Prisma Access.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/panorama.png
 tags:
   - Firewall Management
   - Network Security
@@ -16,18 +29,35 @@ created: '2026-03-16'
 modified: '2026-04-28'
 specificationVersion: '0.19'
 apis:
-  - aid: panorama:panorama
-    name: Panorama API
-    description: >-
-      Panorama XML/REST API for centralized network security management across
-      Palo Alto Networks firewalls.
-    humanURL: https://docs.paloaltonetworks.com/panorama/10-1/panorama-admin/panorama-overview
-    tags:
-      - Firewall Management
-      - Network Security
-    properties:
-      - type: Documentation
-        url: https://docs.paloaltonetworks.com/panorama
+- aid: panorama:panorama
+  name: Panorama API
+  description: >-
+    Panorama XML/REST API for centralized network security management across Palo Alto Networks firewalls.
+  humanURL: https://docs.paloaltonetworks.com/panorama/10-1/panorama-admin/panorama-overview
+  tags:
+  - Firewall Management
+  - Network Security
+  properties:
+  - type: Documentation
+    url: https://docs.paloaltonetworks.com/panorama
+- aid: panorama:panorama-panorama-api-api
+  name: Panorama Panorama API API
+  description: The Panorama API API from Panorama — 1 operation(s) for panorama api.
+  humanURL: https://docs.paloaltonetworks.com/panorama/10-1/panorama-admin/panorama-overview
+  tags:
+  - Panorama API
+  properties:
+  - type: OpenAPI
+    url: openapi/panorama-panorama-api-api-openapi.yml
+- aid: panorama:panorama-restapi-api
+  name: Panorama Restapi API
+  description: The Restapi API from Panorama — 3 operation(s) for restapi.
+  humanURL: https://docs.paloaltonetworks.com/panorama/10-1/panorama-admin/panorama-overview
+  tags:
+  - Restapi
+  properties:
+  - type: OpenAPI
+    url: openapi/panorama-restapi-api-openapi.yml
 common:
   - type: AgenticAccess
     url: agentic-access/panorama-agentic-access.yml
