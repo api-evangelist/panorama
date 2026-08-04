@@ -1,0 +1,16 @@
+{
+  "provider": "panorama",
+  "sources": [
+    "panorama-panorama-api-api-openapi.yml",
+    "panorama-restapi-api-openapi.yml"
+  ],
+  "outputs": [
+    "panorama-panorama-api-api-openapi.yml",
+    "panorama-restapi-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
