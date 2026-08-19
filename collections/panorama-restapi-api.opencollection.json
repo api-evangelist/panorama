@@ -1,0 +1,144 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Panorama Panorama API Restapi API",
+    "version": "11.1"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "X-PAN-KEY",
+      "value": "{{X-PAN-KEY}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Restapi",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List address objects",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{panorama_host}/restapi/v11.1/Objects/Addresses",
+            "params": [
+              {
+                "name": "location",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "device-group",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List address objects"
+        },
+        {
+          "info": {
+            "name": "Create an address object",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{panorama_host}/restapi/v11.1/Objects/Addresses",
+            "params": [
+              {
+                "name": "location",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "name",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create an address object"
+        },
+        {
+          "info": {
+            "name": "List security rules",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{panorama_host}/restapi/v11.1/Policies/SecurityRules",
+            "params": [
+              {
+                "name": "location",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "device-group",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List security rules"
+        },
+        {
+          "info": {
+            "name": "Create a security rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{panorama_host}/restapi/v11.1/Policies/SecurityRules",
+            "params": [
+              {
+                "name": "location",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "name",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a security rule"
+        },
+        {
+          "info": {
+            "name": "List network interfaces",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{panorama_host}/restapi/v11.1/Network/Interfaces",
+            "params": [
+              {
+                "name": "location",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List network interfaces"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
