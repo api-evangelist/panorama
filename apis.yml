@@ -5,6 +5,17 @@ description: >-
   Networks that provides centralized policy management, device configuration,
   and logging across Palo Alto Networks firewalls and Prisma Access.
 type: Index
+deliveryModel:
+  model: unknown
+  open_source: false
+  commercial: false
+  callable_host: false
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - openapi
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: freemium
   onboarding: self-serve
