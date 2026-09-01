@@ -65,7 +65,7 @@ apis:
   description: The Restapi API from Panorama — 3 operation(s) for restapi.
   humanURL: https://docs.paloaltonetworks.com/panorama/10-1/panorama-admin/panorama-overview
   tags:
-  - Restapi
+  - REST API
   tags_raw:
   - Restapi
   properties:
