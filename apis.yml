@@ -41,8 +41,8 @@ specificationVersion: '0.23'
 apis:
 - aid: panorama:panorama
   name: Panorama API
-  description: Panorama XML/REST API for centralized network security management across Palo Alto Networks
-    firewalls.
+  description: >-
+    Panorama XML/REST API for centralized network security management across Palo Alto Networks firewalls.
   humanURL: https://docs.paloaltonetworks.com/panorama/10-1/panorama-admin/panorama-overview
   tags:
   - Firewall Management
@@ -59,17 +59,15 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/panorama-panorama-api-api-openapi.yml
-- aid: panorama:panorama-restapi-api
-  name: Panorama Restapi API
-  description: The Restapi API from Panorama — 3 operation(s) for restapi.
+- aid: panorama:panorama-rest-api-api
+  name: Panorama REST API
+  description: The REST API API from Panorama — 3 operation(s) for rest api.
   humanURL: https://docs.paloaltonetworks.com/panorama/10-1/panorama-admin/panorama-overview
   tags:
   - REST API
-  tags_raw:
-  - Restapi
   properties:
   - type: OpenAPI
-    url: openapi/panorama-restapi-api-openapi.yml
+    url: openapi/panorama-rest-api-api-openapi.yml
 common:
 - type: AgenticAccess
   url: agentic-access/panorama-agentic-access.yml
