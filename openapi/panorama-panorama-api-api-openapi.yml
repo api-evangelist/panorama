@@ -9,9 +9,7 @@ info:
 
     `type=config`, etc.), while the REST API uses versioned resource paths
 
-    under `/restapi/v{version}/`.
-
-    '
+    under `/restapi/v{version}/`.'
   version: '11.1'
   contact:
     name: Palo Alto Networks
@@ -36,9 +34,7 @@ paths:
 
         `type` query parameter (e.g. `keygen`, `op`, `config`, `commit`,
 
-        `report`, `export`, `import`, `log`, `user-id`).
-
-        '
+        `report`, `export`, `import`, `log`, `user-id`).'
       parameters:
       - in: query
         name: type
@@ -84,6 +80,8 @@ paths:
                 type: string
       tags:
       - Panorama API
+      operationId: getApi
+      x-operation-id-source: derived
     post:
       summary: PAN-OS XML API request (POST form)
       description: Same as GET, but parameters may be provided as form fields.
@@ -113,6 +111,8 @@ paths:
                 type: string
       tags:
       - Panorama API
+      operationId: postApi
+      x-operation-id-source: derived
 components:
   securitySchemes:
     ApiKeyHeader:

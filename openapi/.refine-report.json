@@ -1,20 +1,34 @@
 {
   "provider": "panorama",
   "sources": [
-    "panorama-panorama-api-api-openapi.yml",
-    "panorama-restapi-api-openapi.yml"
+    "_original/panorama-openapi.yml"
   ],
   "outputs": [
     "panorama-panorama-api-api-openapi.yml",
     "panorama-restapi-api-openapi.yml"
   ],
-  "archived": [],
+  "archived": [
+    "deleted 1 superseded output(s) from the previous generation"
+  ],
   "errors": [],
   "warnings": [],
   "notes": [
-    "panorama-panorama-api-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "panorama-restapi-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "apis.yml register: already-registered"
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "panorama-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "panorama-openapi.yml: tagged paths GET /api/ -> Panorama API",
+    "panorama-openapi.yml: tagged paths POST /api/ -> Panorama API",
+    "panorama-openapi.yml: tagged paths GET /restapi/v11.1/Objects/Addresses -> Restapi",
+    "panorama-openapi.yml: tagged paths POST /restapi/v11.1/Objects/Addresses -> Restapi",
+    "panorama-openapi.yml: tagged paths GET /restapi/v11.1/Policies/SecurityRules -> Restapi",
+    "panorama-openapi.yml: tagged paths POST /restapi/v11.1/Policies/SecurityRules -> Restapi",
+    "panorama-openapi.yml: tagged paths GET /restapi/v11.1/Network/Interfaces -> Restapi",
+    "panorama-openapi.yml: declared missing tag: Panorama API",
+    "panorama-openapi.yml: declared missing tag: Restapi",
+    "superseded outputs removed: panorama-rest-api-api-openapi.yml",
+    "apis.yml register: written (+1 apis, 3 total)"
   ],
-  "skipped": []
+  "skipped": [
+    "panorama-panorama-api-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "panorama-rest-api-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

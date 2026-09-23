@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: Panorama Panorama Restapi API
+  title: Panorama Restapi API
   description: 'Panorama and PAN-OS XML and REST APIs for centralized network security
 
     management across Palo Alto Networks firewalls. The XML API uses
@@ -9,9 +9,7 @@ info:
 
     `type=config`, etc.), while the REST API uses versioned resource paths
 
-    under `/restapi/v{version}/`.
-
-    '
+    under `/restapi/v{version}/`.'
   version: '11.1'
   contact:
     name: Palo Alto Networks
@@ -27,7 +25,7 @@ security:
 - ApiKeyHeader: []
 - ApiKeyQuery: []
 tags:
-- name: Restapi
+- name: REST API
 paths:
   /restapi/v11.1/Objects/Addresses:
     get:
@@ -51,7 +49,9 @@ paths:
         '200':
           description: A list of address objects.
       tags:
-      - Restapi
+      - REST API
+      operationId: getRestapiV111ObjectsAddresses
+      x-operation-id-source: derived
     post:
       summary: Create an address object
       parameters:
@@ -75,7 +75,9 @@ paths:
         '200':
           description: Address object created.
       tags:
-      - Restapi
+      - REST API
+      operationId: postRestapiV111ObjectsAddresses
+      x-operation-id-source: derived
   /restapi/v11.1/Policies/SecurityRules:
     get:
       summary: List security rules
@@ -93,7 +95,9 @@ paths:
         '200':
           description: A list of security rules.
       tags:
-      - Restapi
+      - REST API
+      operationId: getRestapiV111PoliciesSecurityRules
+      x-operation-id-source: derived
     post:
       summary: Create a security rule
       parameters:
@@ -117,7 +121,9 @@ paths:
         '200':
           description: Security rule created.
       tags:
-      - Restapi
+      - REST API
+      operationId: postRestapiV111PoliciesSecurityRules
+      x-operation-id-source: derived
   /restapi/v11.1/Network/Interfaces:
     get:
       summary: List network interfaces
@@ -131,7 +137,9 @@ paths:
         '200':
           description: A list of network interfaces.
       tags:
-      - Restapi
+      - REST API
+      operationId: getRestapiV111NetworkInterfaces
+      x-operation-id-source: derived
 components:
   securitySchemes:
     ApiKeyHeader:
