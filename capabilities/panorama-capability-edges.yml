@@ -1,0 +1,26 @@
+slug: panorama
+provider: Panorama
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Software & Technology
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 1
+edges:
+- tag: REST API
+  spec_file: panorama-rest-api-api-openapi.yml
+  capability_id: BC-620
+  capability_id_l1: BC-620
+  capability_name: Cybersecurity Management
+  confidence: 0.75
+  evidence: '"getRestapiV111PoliciesSecurityRules  List security rules"; "postRestapiV111ObjectsAddresses  Create
+    an address object"'
+  reason: Operations create and list firewall security policy rules, address objects and network interfaces
+    — configuration of network security controls, i.e. cybersecurity management. Ambiguous between security
+    governance/architecture and network infrastructure management, so no L2 asserted.
